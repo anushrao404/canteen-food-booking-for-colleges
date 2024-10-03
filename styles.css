@@ -1,0 +1,225 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+.menu-container {
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-button {
+    margin-right: 10px;
+}
+
+.right-button {
+    margin-left: 10px;
+}
+
+
+.food-menu {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+}
+
+.food-menu::-webkit-scrollbar {
+    display: none; 
+}
+
+.food-item {
+    background: white;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 0 auto;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.food-item h2 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.food-item p {
+    color: #ff5e62;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+.cart-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ff5e62;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.cart-container.hidden {
+    display: none;
+}
+
+.cart-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cart-items {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cart-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-summary p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.place-order-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5e62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.place-order-button:hover {
+    background-color: #ff3b40;
+}
+
+
+.food-item.selected {
+    border: 2px solid #ff5e62;
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-button {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+    
+    .food-item {
+        width: 150px;
+    }
+}
+
+

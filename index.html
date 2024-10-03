@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Food Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Canteen Food Booking</h1>
+    </header>
+
+    <div class="menu-container">
+        <button class="nav-button left-button" aria-label="Scroll Left">&#8249;</button>
+    <section class="food-menu">
+        <div class="food-item" onclick="bookItem('Pizza')" data-name="Food Item 1" data-price="250">
+            <img src="images\pizza.jpg" alt="Pizza">
+            <h2>Pizza</h2>
+            <p>250/-</p>
+        </div>
+        <div class="food-item" onclick="bookItem('Burger')"data-name="Food Item 2" data-price="350">
+            <img src="images\burger.jpg" alt="Burger">
+            <h2>Burger</h2>
+            <p>350/-</p>
+        </div>
+        <div class="food-item" onclick="bookItem('Pasta')"data-name="Food Item 3" data-price="150">
+            <img src="images\pasta.jpg" alt="Pasta">
+            <h2>Pasta</h2>
+            <p>150/-</p>
+        </div>
+        <div class="food-item" onclick="bookItem('Fries')"data-name="Food Item 4" data-price="160">
+            <img src="images\fries.jpg" alt="Fries">
+            <h2>Fries</h2>
+            <p>160/-</p>
+        </div>
+        <div class="food-item" onclick="bookItem('sandwich')" data-name="Food Item 5" data-price="140">
+            <img src="images\sandwich.webp" alt="sandwich">
+            <h2>sandwich</h2>
+            <p>140/-</p>
+        </div> 
+        <div class="food-item" onclick="bookItem('noodles')" data-name="Food Item 6" data-price="120"> 
+            <img src="images\noodles.jpeg" alt="noodles">
+            <h2>noodles</h2>
+            <p>120/-</p>
+        </div>
+         <div class="food-item" onclick="bookItem('manchurian')" data-name="Food Item 7" data-price="130">
+            <img src="images\manchurian.jpg" alt="manchurian">
+            <h2>manchirian</h2>
+            <p>130/-</p>
+        </div>
+        <div class="food-item" onclick="bookItem('dosa')" data-name="Food Item 8" data-price="70">
+            <img src="images\dosa.jpg" alt="Fries">
+            <h2>Dosa</h2>
+            <p>70/-</p> 
+        </div>
+    </section>
+    <button class="nav-button right-button" aria-label="Scroll Right">&#8250;</button>
+</div>
+
+<div class="cart-container hidden">
+    <h2>Your Cart</h2>
+    <ul class="cart-items">
+       
+    </ul>
+    <div class="cart-summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Bill: &#8377;<span id="total-bill">0</span></p>
+    </div>
+    <button class="place-order-button">Place Order</button>
+</div>
+    <footer>
+        <p>Contact Us: collegeCanteen@gmail.com | Call: +91 93903 XXXXX</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
